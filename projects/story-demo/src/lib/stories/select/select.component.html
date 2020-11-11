@@ -1,0 +1,6 @@
+<ng-container *ngIf="label">
+    <span>{{label}}</span>
+</ng-container>
+<nz-select [(ngModel)]="curItem"  [ngClass]="setClass">
+    <nz-option *ngFor="let item of itemList" nzLabel="item" nzValue="item"></nz-option>
+</nz-select>

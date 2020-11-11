@@ -59,7 +59,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       </div>
     </section>
   </article>`,
-  styleUrls: ['./page.css'],
+  styleUrls: ['./page.scss'],
 })
 export default class PageComponent {
   @Input()

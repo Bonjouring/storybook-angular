@@ -20,7 +20,10 @@
             "tsConfig": "projects/story-demo/tsconfig.lib.json",
             "project": "projects/story-demo/ng-package.json",
             "assets": [
-              "projects/story-demo/src/lib/assets"
+              "projects/story-demo/src/assets"
+            ],
+            "styles": [
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
             ]
           },
           "configurations": {

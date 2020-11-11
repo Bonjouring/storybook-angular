@@ -46,7 +46,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       </div>
     </div>
   </header>`,
-  styleUrls: ['./header.css'],
+  styleUrls: ['./header.scss'],
 })
 export class HeaderComponent {
   @Input()

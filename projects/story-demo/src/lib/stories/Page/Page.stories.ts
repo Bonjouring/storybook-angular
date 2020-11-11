@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
 
-import { ButtonComponent } from '../../projects/story-demo/src/lib/component/Button/button.component';
-import { HeaderComponent } from '../../projects/story-demo/src/lib/component/Header/header.component';
+import { ButtonComponent } from '../Button/button.component';
+import { HeaderComponent } from '../Header/header.component';
 import Page from './page.component';
 
 import * as HeaderStories from '../Header/Header.stories';

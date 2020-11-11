@@ -9,12 +9,10 @@ export * from './lib/story-demo.module';
 /**
  * Button
  */
-export * from './lib/component/Button/button.component';
-export * from './lib/component/Button/button.module';
+export * from './lib/stories/Button/button.module';
 
 /**
  * Header
  */
-export * from './lib/component/Header/header.component';
-export * from './lib/component/Header/header.module';
+export * from './lib/stories/Header/header.module';
 
