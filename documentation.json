@@ -261,7 +261,7 @@
         },
         {
             "name": "SelectComponent",
-            "id": "component-SelectComponent-fc286f77324b6e41a340c76ca4f0ea65",
+            "id": "component-SelectComponent-250867395aa13f08a36471f5a3e9d1ed",
             "file": "projects/story-demo/src/lib/stories/select/select.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -299,7 +299,15 @@
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "curItem",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 28
+                }
+            ],
             "methodsClass": [
                 {
                     "name": "setClass",
@@ -307,7 +315,7 @@
                     "optional": false,
                     "returnType": "string",
                     "typeParameters": [],
-                    "line": 30
+                    "line": 32
                 }
             ],
             "hostBindings": [],
@@ -315,7 +323,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'lib-select',\n  templateUrl: './select.component.html',\n  styleUrls: ['./select.component.scss']\n})\nexport class SelectComponent {\n\n  /**\n   * 下拉框内容\n   */\n  @Input()\n  itemList: [];\n\n  /**\n   * 下拉框尺寸\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * 下拉框标签\n   */\n  @Input()\n  label: string;\n\n  constructor() { }\n\n  setClass(): string {\n    return `storybook-select--${this.size}`;\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'lib-select',\n  templateUrl: './select.component.html',\n  styleUrls: ['./select.component.scss']\n})\nexport class SelectComponent {\n\n  /**\n   * 下拉框内容\n   */\n  @Input()\n  itemList: [];\n\n  /**\n   * 下拉框尺寸\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * 下拉框标签\n   */\n  @Input()\n  label: string;\n\n  curItem;\n\n  constructor() { }\n\n  setClass(): string {\n    return `storybook-select--${this.size}`;\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -328,9 +336,9 @@
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 26
+                "line": 28
             },
-            "templateData": "<ng-container *ngIf=\"label\">\n    <span>{{label}}</span>\n</ng-container>\n<nz-select [(ngModel)]=\"curItem\"  [ngClass]=\"setClass\">\n    <nz-option *ngFor=\"let item of itemList\"></nz-option>\n</nz-select>\n"
+            "templateData": "<ng-container *ngIf=\"label\">\n    <span>{{label}}</span>\n</ng-container>\n<nz-select [(ngModel)]=\"curItem\"  [ngClass]=\"setClass\">\n    <nz-option *ngFor=\"let item of itemList\" nzLabel=\"item\" nzValue=\"item\"></nz-option>\n</nz-select>\n"
         },
         {
             "name": "StoryDemoComponent",
@@ -629,7 +637,7 @@
                 "subtype": "variable",
                 "file": "projects/story-demo/src/lib/stories/Button/Button.stories.ts",
                 "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
+                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n  moduleMetadata: {\n    declarations: [ButtonComponent],\n  },\n  template:  `<storybook-button></storybook-button>`\n})"
             },
             {
                 "name": "Template",
@@ -716,7 +724,7 @@
                     "subtype": "variable",
                     "file": "projects/story-demo/src/lib/stories/Button/Button.stories.ts",
                     "type": "Story<ButtonComponent>",
-                    "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
+                    "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n  moduleMetadata: {\n    declarations: [ButtonComponent],\n  },\n  template:  `<storybook-button></storybook-button>`\n})"
                 }
             ],
             "projects/story-demo/src/lib/stories/Header/Header.stories.ts": [
@@ -796,7 +804,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 6,
+        "count": 5,
         "status": "low",
         "files": [
             {
@@ -950,8 +958,8 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "SelectComponent",
-                "coveragePercent": 50,
-                "coverageCount": "3/6",
+                "coveragePercent": 42,
+                "coverageCount": "3/7",
                 "status": "medium"
             },
             {
